@@ -34,15 +34,6 @@ function Add_data() {
   var name = document.querySelector(".name").value;
   var email = document.querySelector(".email").value;
 
-  if (!validateName(name)) {
-    alert("Please enter a valid name");
-    return;
-  }
-
-  //   if (!validateName(email)) {
-  //     alert("Please enter a valid email");
-  //     return;
-  //   }
 
   var newObj = {
     id: data.length + 1,
@@ -57,13 +48,6 @@ function Add_data() {
   readAll();
 }
 
-function validateName(name) {
-  return /^[a-zA-Z ]{2,30}$/.test(name);
-}
-
-// function validateEmail(email) {
-//   return /^([a-zA-Z0-9\.-_]+)@([a-zA-Z0-9]+)\.([a-z]{2,20})$/(email);
-// }
 
 function delet(id) {
   data = data.filter((rec) => rec.id !== id);
