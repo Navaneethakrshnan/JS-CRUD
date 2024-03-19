@@ -9,6 +9,7 @@ body {
 
 h1 {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .login-container {
@@ -22,6 +23,7 @@ h1 {
   background-color: #ffffff;
   border-radius: 15px;
   padding: 40px;
+  padding-top: 20px;
   width: 300px;
   box-shadow: 0px 6px 10px rgba(227, 223, 223, 0.2);
 }
@@ -108,4 +110,13 @@ h1 {
 
 .login-form p a:hover {
   text-decoration: underline;
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto; /* Align the image in the center */
+  border-radius: 50%; /* Add border radius */
+  border: 2px solid #ccc; /* Optional: Add border */
+  margin-top: -15px;
+  margin-bottom: 20px;
 }
