@@ -12,14 +12,34 @@
     <div class="container">
       <div class="form_container">
         <form class="create_form">
-          <input type="text" class="name" placeholder="Name" />
-          <input type="email" class="email" placeholder="Email" />
-          <button class="btn btn-primary">Create</button>
+          <input
+            type="text"
+            class="name"
+            style="text-align: center"
+            placeholder="Enter the name"
+          />
+          <input
+            type="email"
+            class="email"
+            style="text-align: center"
+            placeholder="Enter the email"
+          />
+          <button onclick="Add_data()" type="button">Create</button>
         </form>
         <form class="update_form">
-          <input type="text" class="uname" placeholder="Name" />
-          <input type="email" class="uemail" placeholder="Email" />
-          <button>Update</button>
+          <input
+            type="text"
+            class="uname"
+            style="text-align: center"
+            placeholder="Enter the Name"
+          />
+          <input
+            type="email"
+            class="uemail"
+            style="text-align: center"
+            placeholder="Enter the Email"
+          />
+          <button class="update" type="button">Update</button>
         </form>
         <div>
           <button class="add_div" onclick="create()">Add</button>

@@ -1,9 +1,13 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: black;
 }
 
 .container {
-  margin: 50px auto;
+  margin: 100px 400px auto;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 20px;
 }
 
 .form_container {
@@ -13,6 +17,12 @@ body {
 
 form {
   margin-bottom: 20px;
+}
+.update {
+  background-color: black;
+  color: aliceblue;
+  padding: 8px;
+  border-radius: 20px;
 }
 
 input[type="text"],
@@ -27,6 +37,19 @@ button {
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+table .edit {
+  background-color: blueviolet;
+  color: white;
+  justify-items: center;
+  padding: 7px;
+}
+
+table .delete {
+  background-color: red;
+  color: white;
+  padding: 7px;
 }
 
 th,
