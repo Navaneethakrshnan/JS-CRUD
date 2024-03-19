@@ -1,13 +1,16 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: black;
+  background-color: #0f172a;
 }
 
 .container {
   margin: 100px 400px auto;
-  background-color: #fff;
+  background-color: #cbd5e1;
   padding: 60px;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form_container {
@@ -21,8 +24,12 @@ form {
 .update {
   background-color: black;
   color: aliceblue;
-  padding: 8px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.update:hover {
+  background-color: #334155;
 }
 
 input[type="text"],
@@ -30,8 +37,31 @@ input[type="email"],
 button {
   margin-right: 10px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 10px 15px;
   border-radius: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+button:focus {
+  outline: none;
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 table {
@@ -40,36 +70,44 @@ table {
 }
 
 table .edit {
-  background-color: blueviolet;
+  background-color: #22c55e;
   color: white;
   justify-items: center;
   padding: 7px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
 }
 
 table .delete {
-  background-color: red;
+  background-color: #be185d;
   color: white;
   padding: 7px;
+  border: none;
+  justify-content: center;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid #475569;
   padding: 10px;
   align-items: center;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #64748b;
 }
 
 .add_div {
   margin-top: 20px;
   font-size: medium;
-  background-color: #831843;
+  background-color: #fbbf24;
   border: none;
-  color: #ddd;
+  color: #000;
   padding: 13px;
+  box-shadow: 0 2px 4px rgba(26, 26, 26, 0.1);
+  font-weight: 00;
   border-radius: 22px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }

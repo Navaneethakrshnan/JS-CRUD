@@ -15,31 +15,42 @@
           <input
             type="text"
             class="name"
+            id="name"
+            required
             style="text-align: center"
             placeholder="Enter the name"
           />
           <input
             type="email"
             class="email"
+            id="email"
+            required
             style="text-align: center"
             placeholder="Enter the email"
           />
           <button onclick="Add_data()" type="button">Create</button>
         </form>
         <form class="update_form">
+          <input class="id" hidden type="text" />
           <input
             type="text"
             class="uname"
+            id="uname"
+            required
             style="text-align: center"
             placeholder="Enter the Name"
           />
           <input
             type="email"
             class="uemail"
+            id="uemail"
+            required
             style="text-align: center"
             placeholder="Enter the Email"
           />
-          <button class="update" type="button">Update</button>
+          <button class="update" onclick="update()" type="button">
+            Update
+          </button>
         </form>
         <div>
           <button class="add_div" onclick="create()">Add</button>
@@ -50,7 +61,7 @@
             <th>Email</th>
             <th>Action</th>
           </thead>
-          <tbody class="data_table"></tbody>
+          <tbody style="background-color: #9ca3af" class="data_table"></tbody>
         </table>
       </div>
     </div>

@@ -18,7 +18,7 @@ function readAll() {
       <td>${record.email}</td>
       <td>
       <button class="edit" onclick={edit(${record.id})}>Edit</button>
-      <button class="delete">Delete</button></td>
+      <button class="delete" onclick={delet(${record.id})}>Delete</button></td>
       </tr>`)
   );
 
@@ -34,8 +34,18 @@ function Add_data() {
   var name = document.querySelector(".name").value;
   var email = document.querySelector(".email").value;
 
+  if (!validateName(name)) {
+    alert("Please enter a valid name");
+    return;
+  }
+
+  //   if (!validateName(email)) {
+  //     alert("Please enter a valid email");
+  //     return;
+  //   }
+
   var newObj = {
-    id: 3,
+    id: data.length + 1,
     name: name,
     email: email,
   };
@@ -47,9 +57,35 @@ function Add_data() {
   readAll();
 }
 
+function validateName(name) {
+  return /^[a-zA-Z ]{2,30}$/.test(name);
+}
+
+// function validateEmail(email) {
+//   return /^([a-zA-Z0-9\.-_]+)@([a-zA-Z0-9]+)\.([a-z]{2,20})$/(email);
+// }
+
+function delet(id) {
+  data = data.filter((rec) => rec.id !== id);
+  readAll();
+}
+
 function edit(id) {
   document.querySelector(".update_form").style.display = "block";
   var obj = data.find((rec) => rec.id === id);
   document.querySelector(".uname").value = obj.name;
   document.querySelector(".uemail").value = obj.email;
+  document.querySelector(".id").value = obj.id;
+}
+
+function update() {
+  var id = parseInt(document.querySelector(".id").value);
+  var name = document.querySelector(".uname").value;
+  var email = document.querySelector(".uemail").value;
+
+  var index = data.findIndex((rec) => rec.id === id);
+  data[index] = { id, name, email };
+
+  document.querySelector(".update_form").style.display = "none";
+  readAll();
 }
