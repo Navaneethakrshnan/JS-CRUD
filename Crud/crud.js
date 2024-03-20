@@ -34,6 +34,17 @@ function Add_data() {
   var name = document.querySelector(".name").value;
   var email = document.querySelector(".email").value;
 
+  if (name === "" || email === "") {
+    alert("Name and email cannot be empty");
+    return;
+  }
+
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var invalidEmailFormat = /@\w+\.$/;
+  if (!emailRegex.test(email) || invalidEmailFormat.test(email)) {
+    alert("Invalid email format. Please use format 'example@gmail.com'");
+    return;
+  }
 
   var newObj = {
     id: data.length + 1,
@@ -42,12 +53,14 @@ function Add_data() {
   };
   data.push(newObj);
 
+  document.querySelector(".name").value = "";
+  document.querySelector(".email").value = "";
+
   document.querySelector(".create_form").style.display = "none";
   document.querySelector(".add_div").style.display = "block";
 
   readAll();
 }
-
 
 function delet(id) {
   data = data.filter((rec) => rec.id !== id);
