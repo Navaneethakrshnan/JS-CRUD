@@ -30,7 +30,7 @@ function validation() {
     passwordError.innerHTML = "";
   }
   if (!password_pattern.test(password)) {
-    passwordError.innerHTML = "password be like this --  P@ssw0rd! --";
+    passwordError.innerHTML = "password be like this -- P@ssw0rd! --";
     // passwordError.innerHTML = alert("password should be like -- P@ssw0rd! --");
     passwordError.style.color = "red";
     return false;
