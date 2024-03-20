@@ -1,6 +1,7 @@
 let data = [
   { id: 1, name: "Navaeethan", email: "nave@gmail.com" },
   { id: 2, name: "krishna", email: "krish@gmail.com" },
+  { id: 3, name: "Krey", email: "krey@gmail.com" },
 ];
 
 function readAll() {
