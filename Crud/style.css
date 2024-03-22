@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%,950px;
 }
 
 .form_container {
@@ -21,6 +22,7 @@ body {
 form {
   margin-bottom: 20px;
 }
+
 .update {
   background-color: black;
   color: aliceblue;
@@ -120,4 +122,70 @@ th {
 .update_form,
 .create_form {
   display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    margin: 100px 40px auto;
+    background-color: #cbd5e1;
+    padding: 60px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .form_container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  table .delete,
+  table .edit {
+    padding: 5px;
+    font-size: 12px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  button {
+    width: calc(100% - 20px);
+    margin: 5px 0;
+  }
+
+  button {
+    margin-left: 0;
+  }
+
+  .add_div {
+    margin-top: 20px;
+    font-size: medium;
+    background-color: #f59e0b;
+    border: none;
+    color: #000;
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgba(26, 26, 26, 0.1);
+    font-weight: 00;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    width: auto;
+  }
 }
